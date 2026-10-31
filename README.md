@@ -74,3 +74,18 @@ The starter code uses only the Python standard library.
 
 Oscar Cortez  
 AI and Robotics Engineering
+
+---
+
+## Physical model-robot workstream — Byte Bots (ITAI 4376)
+
+The original **electric-mobility-scooter digital twin** above remains a **software/simulation project**. A related but distinct hands-on classroom proof of concept is being documented here under **Byte Bots**: a *scaled ELEGOO Smart Robot Car V4.0*, controlled by a Raspberry Pi 5 over USB serial through an Arduino UNO. This is **not** a full-size wheelchair or a person-carrying mobility system.
+
+**October 30–31, 2026 bench status:** ELEGOO firmware v2.1.2 uploaded; two-way Pi↔Arduino commands verified at 9600 baud; forward, reverse, left and right briefly observed with the wheels elevated, followed by stopping. Voice controls, lost-communication safeguards, measured stopping performance and floor tests are **not yet validated**.
+
+- [ITAI 4376 Byte Bots milestone index](docs/byte-bots/Byte_Bots_Milestone_Index.md)
+- [October 30–31 hardware recovery and bench-test log](docs/byte-bots/Byte_Bots_Hardware_Test_Log_2026-10-30_31.md)
+
+**Team record:** Oscar Cortez and Andrew Kuruvilla remain on Byte Bots; Anthony Randall contributed earlier assembly/integration before departing. The October 30–31 at-home tests were performed by Oscar. The official ELEGOO firmware is manufacturer-authored.
+
+> **Safety:** Scaled proof-of-concept only. No human-use, autonomous transport, or commercial assistive-device safety claims are made.
