@@ -12,7 +12,7 @@
 | 1 — Charter and requirements | Problem, stakeholder, measurable acceptance criteria, risk identification | Charter exists; original submission not yet attached here |
 | 2 — Feasibility and direction | Scaled robot feasibility, voice-command concept, stakeholder alignment, safety planning | Revised submission dated Sep. 25, 2026; original file not yet attached here |
 | 3 — Midterm project blueprint | Voice-controlled scaled wheelchair/scooter design and planned integration | Blueprint prepared Oct. 22, 2026; original file not yet attached here |
-| 4 and later | Integration, demonstrations, final verification | In progress; do not mark complete before submission |
+| 4 — Integration progress | UART/shield troubleshooting and hardware handover | Documented historically; consult original course submission |\n| 5 — Integration and test review | Nov. 6 unpowered STOP/heartbeat/ultrasonic observations | Review written Nov. 9; formal acceptance incomplete |\n| Final panel preparation | Later November floor-trial recordings, demo and fallback plan | Showcase and review materials prepared; Canvas submission not verified |
 
 ## October 30–31, 2026: bench-testing milestone
 
@@ -33,9 +33,17 @@ See [Hardware Recovery and Bench-Test Log](Byte_Bots_Hardware_Test_Log_2026-10-3
 
 The ELEGOO firmware is the **manufacturer's code**, not original Byte Bots software.
 
-## Pending
+## November testing: progress and evidence limits
 
-USB microphone; voice-to-serial command integration; STOP under active drive; unexpected command and lost-communication safeguards; repeatability evidence; supervised model-only floor testing. **No human-occupied mobility-device testing is planned or supported by these results.**
+- **Nov. 4:** A controlled five-word recognition experiment improved from 33/100 to 100/100 after adding a recording cue. This is not final moving-control acceptance.
+- **Nov. 6:** Serial STOP acknowledgement `{BB_ok}`, heartbeat-to-`LINK_LOST`, `DISARMED` rejection, and ultrasonic BLOCK/ALLOW dry-run outcomes were documented with safety limitations. Unexpected wheel movement during battery disconnection and a possible ultrasonic false-clear remained findings.
+- **Later November:** Oscar conducted seven recorded floor-trial clips and reports tests using battery and cord-assisted power, external network access, and a direct local laptop-to-Pi connection without external Wi-Fi/internet. Those observations do not by themselves establish a fully controlled, instrumented acceptance matrix.
+
+See the [stand-alone professional Byte Bots write-up](README.md) for the system architecture, actual results, and future improvements.
+
+## Still unverified / unfinished
+
+Formal measured speech-to-wheel latency; repeated powered voice STOP trials; independent physical emergency cutoff; bounded physical motor stop under link loss; sensor calibration; full blueprint repeatability/endurance scenarios; frozen release and synchronized command-to-motion proof. The local wireless connection does not require internet but uses the Pi's own Wi-Fi radio. **No human-occupied mobility-device testing is supported by these results.**
 
 ## Evidence/privacy
 
