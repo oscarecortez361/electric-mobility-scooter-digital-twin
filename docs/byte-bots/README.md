@@ -20,7 +20,7 @@ The control concept takes voice input through a microphone, runs Vosk speech rec
 
 The five design commands were **forward, backward, left, right, STOP**. Not every command has been independently validated through the same final end-to-end powered test.
 
-\`\`\`mermaid
+```mermaid
 flowchart TD
     U[Operator voice] --> M[Microphone]
     M --> P[Raspberry Pi 5 + local Vosk]
@@ -31,7 +31,7 @@ flowchart TD
     D[Ultrasonic readings] --> A
     H[Heartbeat / link state] --> A
     E[Human emergency power cutoff - verification pending] -.-> A
-\`\`\`
+```
 
 **Why offline operation matters:** Recognition runs on the Pi, not in the cloud. During later trials, Oscar accessed the Pi directly from his HP laptop through the Pi's **local wireless connection**, without depending on an external Wi-Fi network or internet. That does **not** mean the Pi radio was powered off: it supplied the local connection. SSH allowed the laptop to access the system; it was not a cloud speech-recognition service.
 
@@ -43,15 +43,15 @@ The project progressed from troubleshooting communication and software on the be
 |---|---|---|
 | **Oct. 30–31** | Rebuilt Raspberry Pi-to-Arduino communication over CH340 USB serial at 9600 baud. Verified replies and short **forward, backward, left, and right** motor actions with wheels elevated, followed by stops. | Floor-driving quality, measured stopping distance, or emergency-stop certification. |
 | **Nov. 4** | Controlled single-speaker voice-recognition experiment improved from **33/100** to **100/100** by adding a short “SPEAK NOW” delay before speaking five single-word commands. | Final speech-to-wheel success, multiple users, noisy-room robustness, or final phrase grammar acceptance. |
-| **Nov. 6** | Serial STOP returned \`{BB_ok}\`; interruption of heartbeat messaging produced \`LINK_LOST\`, followed by rejected commands in \`DISARMED\` state. Ultrasonic trial placements produced BLOCK/ALLOW outputs. | Actual moving-wheel stop time, independent power-cutoff performance, or calibrated sensing. |
+| **Nov. 6** | Serial STOP returned `{BB_ok}`; interruption of heartbeat messaging produced `LINK_LOST`, followed by rejected commands in `DISARMED` state. Ultrasonic trial placements produced BLOCK/ALLOW outputs. | Actual moving-wheel stop time, independent power-cutoff performance, or calibrated sensing. |
 | **Later November** | **Seven recorded floor-trial clips** show physical robot motion in different sessions. Oscar tested battery and external-cord power arrangements and external-network versus local laptop-to-Pi connectivity. | A fully controlled factorial test matrix, independently logged network status, or proven voice-command-to-wheel causation in every clip. |
 
 ### Different power and network conditions
 
 We explored **both battery power and a power-cord workaround**, and **both use of an external network and a direct local laptop-to-Pi connection**.
 
-- **Externally connected session:** source recordings \`7227\` and \`7226\`.
-- **Local-link session (no external network/internet):** \`7081\`, \`7080\`, \`7079\`, \`7077\`, \`7076\`. The external power cord is visible in these clips.
+- **Externally connected session:** source recordings `7227` and `7226`.
+- **Local-link session (no external network/internet):** `7081`, `7080`, `7079`, `7077`, `7076`. The external power cord is visible in these clips.
 - The clip groupings and power conditions come from Oscar's test notes. The raw video does not independently record Wi-Fi settings or identify the power source for every frame.
 - A power cord solved a testing problem but introduced a snag hazard. It is **not** the intended mobility design.
 
