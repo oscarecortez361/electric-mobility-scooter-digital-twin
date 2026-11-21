@@ -1,5 +1,7 @@
 # Electric Mobility Scooter Digital Twin & AI Control System
 
+> **Featured 2026 hardware showcase:** [Byte Bots — Voice-Controlled Robotic Mobility](docs/byte-bots/README.md). A separate hands-on ITAI 4376 scaled robot project featuring a Raspberry Pi 5, local Vosk speech recognition, Arduino/USB serial control, and November floor-trial documentation. **Not a passenger-carrying or safety-certified mobility device.**
+
 A portfolio and capstone-style project exploring how a digital twin can represent, monitor, and safely assist an electric mobility scooter. The project combines simulated telemetry, rule-based control, AI-ready decision logic, and a path toward future hardware integration.
 
 ## Project goals
@@ -79,13 +81,13 @@ AI and Robotics Engineering
 
 ## Physical model-robot workstream — Byte Bots (ITAI 4376)
 
-The original **electric-mobility-scooter digital twin** above remains a **software/simulation project**. A related but distinct hands-on classroom proof of concept is being documented here under **Byte Bots**: a *scaled ELEGOO Smart Robot Car V4.0*, controlled by a Raspberry Pi 5 over USB serial through an Arduino UNO. This is **not** a full-size wheelchair or a person-carrying mobility system.
+Byte Bots is **separate from the digital-twin simulator documented above**. Oscar Cortez and Andrew Kuruvilla developed a scaled ELEGOO robot with Raspberry Pi 5, Vosk, and Arduino UNO integration for a voice-assisted mobility proof of concept. Earlier bench-testing notes remain linked below; the new stand-alone showcase covers the later November floor trials, battery/cord configurations, local Pi-to-laptop connectivity, engineering lessons, and unclosed safety tests.
 
-**October 30–31, 2026 bench status:** ELEGOO firmware v2.1.2 uploaded; two-way Pi↔Arduino commands verified at 9600 baud; forward, reverse, left and right briefly observed with the wheels elevated, followed by stopping. Voice controls, lost-communication safeguards, measured stopping performance and floor tests are **not yet validated**.
+**[Read the full Byte Bots professional showcase →](docs/byte-bots/README.md)**
 
-- [ITAI 4376 Byte Bots milestone index](docs/byte-bots/Byte_Bots_Milestone_Index.md)
+- [Byte Bots milestone index](docs/byte-bots/Byte_Bots_Milestone_Index.md)
 - [October 30–31 hardware recovery and bench-test log](docs/byte-bots/Byte_Bots_Hardware_Test_Log_2026-10-30_31.md)
 
-**Team record:** Oscar Cortez and Andrew Kuruvilla remain on Byte Bots; Anthony Randall contributed earlier assembly/integration before departing. The October 30–31 at-home tests were performed by Oscar. The official ELEGOO firmware is manufacturer-authored.
+**Attribution:** Oscar Cortez — project management, safety, documentation, and hands-on testing; Andrew Kuruvilla — team software/voice integration workstream; Anthony Randall — earlier assembly and integration contributions. ELEGOO firmware and Vosk are third-party technologies.
 
-> **Safety:** Scaled proof-of-concept only. No human-use, autonomous transport, or commercial assistive-device safety claims are made.
+> **Safety:** Classroom model only. Formal powered STOP, emergency cutoff, obstacle calibration, and full-system acceptance remain incomplete. No human mobility claims.
