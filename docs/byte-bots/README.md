@@ -114,6 +114,10 @@ The result is a useful **education and portfolio prototype**, not a finished ass
 
 Vosk and ELEGOO firmware are third-party technologies. The team's contribution is the integration, testing, troubleshooting, and engineering documentation; we do not claim authorship of those external components.
 
+### Recovered controller code (November 22, 2026)
+
+We recovered the original V6 and V7 Raspberry Pi Python controllers and the V7 patch script directly from the Byte Bots Pi and archived unmodified copies in [the recovered source folder](source/README.md). Python syntax checks passed. **The exact Arduino V2/ACKFIX firmware source is still missing from GitHub**, and recovery alone does not prove a frozen, fully reproducible end-to-end system or close the formal safety-test gaps.
+
 ### Related documentation
 
 - [Byte Bots milestone index](Byte_Bots_Milestone_Index.md)
@@ -122,4 +126,4 @@ Vosk and ELEGOO firmware are third-party technologies. The team's contribution i
 - [Vosk offline speech recognition](https://alphacephei.com/vosk/)
 - [Separate electric mobility scooter digital-twin project](../../README.md)
 
-*Updated November 21, 2026. The results above describe a prototype with incomplete formal acceptance; they should not be interpreted as certified mobility-device performance.*
+*Updated November 22, 2026. The results above describe a prototype with incomplete formal acceptance; they should not be interpreted as certified mobility-device performance.*
