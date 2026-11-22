@@ -15,7 +15,7 @@
 - Python dependencies include `vosk` and `pyserial`, plus the Raspberry Pi OS `arecord` program and configured USB microphone
 - Arduino UNO at `/dev/ttyUSB0`, 9600 baud, using project-specific JSON serial packets and responses
 - Recognized phrases: `byte bots forward`, `byte bots backward`, `byte bots left`, `byte bots right`, and `stop`; unknown inputs are not mapped to movement
-- Actual Arduino safety firmware source and corresponding complete build/environment instructions **have not yet been recovered into this repository**.
+- The [Arduino V2 / ACKFIX firmware source archive](../firmware/README.md) has now been recovered and archived, but its exact installed/compiled hardware version and complete build reproducibility **remain unverified**.
 
 ## Important boundaries
 
@@ -27,7 +27,7 @@ The V6 banner says “350 ms motor pulses,” but its `PULSE_MS` constant is act
 
 ## Missing for full Milestone 6 reproducibility
 
-1. Recover and archive the exact `ByteBots_Safety_Firmware_V2.ino` / ACKFIX firmware source, ideally confirming the installed board image/version.
+1. Confirm the flashed Arduino board image/version against the recovered V2/ACKFIX source; the ACKFIX package's own notes state it had not been compiled, flashed, or hardware-tested when created.
 2. Record a frozen, witnessed mapping of Python controller + firmware + hardware setup to the final demonstration, including dependencies and safe setup/operations.
 3. Complete or transparently mark unverified final acceptance tests and live industry-panel demonstration separately from these code-recovery artifacts.
 
