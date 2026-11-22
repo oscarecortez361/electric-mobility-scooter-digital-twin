@@ -98,7 +98,7 @@ The November 6 record also documents **unexpected wheel movement during motor-ba
 2. **Instrument the demo:** log recognized phrases, serial requests/replies, Arduino state, power configuration, and synchronized motor video.
 3. **Complete repeatable safety tests:** verify a truly independent cutoff; measure STOP time, watchdog/link-loss behavior, stale-command rejection, recovery, and false positive commands.
 4. **Calibrate the ultrasonic sensor:** test real distances, alignment angles, materials, and sensor failure modes before using clearance as a motion gate.
-5. **Freeze a reproducible build:** version the Python controller, Vosk model, Arduino firmware, operating system, wiring, and tested dependencies.
+5. **Freeze a reproducible build:** recovered source is now archived, but still confirm the deployed Python/Arduino versions, Vosk model, operating system, wiring, tested dependencies, and matching demonstration logs.
 
 ## What we learned
 
@@ -116,7 +116,7 @@ Vosk and ELEGOO firmware are third-party technologies. The team's contribution i
 
 ### Recovered controller code (November 22, 2026)
 
-We recovered the original V6 and V7 Raspberry Pi Python controllers and the V7 patch script directly from the Byte Bots Pi and archived unmodified copies in [the recovered source folder](source/README.md). Python syntax checks passed. **The exact Arduino V2/ACKFIX firmware source is still missing from GitHub**, and recovery alone does not prove a frozen, fully reproducible end-to-end system or close the formal safety-test gaps.
+We recovered the original V6 and V7 Raspberry Pi Python controllers and the V7 patch script directly from the Byte Bots Pi and archived copies in [the recovered source folder](source/README.md). We also recovered and archived the [full Arduino V2 / November 10 ACKFIX package](firmware/README.md), including the sketch and supporting source files plus a separate V6.1 companion Python controller. The Arduino sketch's checksum matches the Milestone 5 record. **The ACKFIX package itself was marked uncompiled/unflashed/untested when prepared, and the running firmware/version at the later floor trials remains unverified.** Recovery alone does not prove a frozen, fully reproducible end-to-end system or close formal safety-test gaps.
 
 ### Related documentation
 
